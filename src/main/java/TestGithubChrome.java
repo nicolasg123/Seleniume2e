@@ -56,5 +56,11 @@ public class TestGithubChrome {
         final WebElement createRepoButton;
         createRepoButton = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"new_repository\"]/div[4]/button")));
         createRepoButton.click();
+        final WebElement headerLink;
+        headerLink = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/div[1]/header/div[7]/details/summary")));
+        headerLink.click();
+        final WebElement menuItem;
+        menuItem = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/div[1]/header/div[7]/details/details-menu/a[1]")));
+        menuItem.click();
     }
 }
