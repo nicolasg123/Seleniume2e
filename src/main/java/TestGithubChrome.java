@@ -62,5 +62,11 @@ public class TestGithubChrome {
         final WebElement menuItem;
         menuItem = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/div[1]/header/div[7]/details/details-menu/a[1]")));
         menuItem.click();
+        final WebElement repoSelect;
+        repoSelect = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"js-pjax-container\"]/div[2]/div/div[2]/div[2]/div/div[1]/div/ol/li/div/div/div/a/span")));
+        repoSelect.click();
+        final WebElement repoUnwatch;
+        repoUnwatch = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"repository-container-header\"]/div[1]/ul/li[1]/notifications-list-subscription-form/details/summary")));
+        repoUnwatch.click();
     }
 }
