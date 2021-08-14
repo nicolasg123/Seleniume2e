@@ -53,5 +53,8 @@ public class TestGithubChrome {
         final WebElement newRepoDescription;
         newRepoDescription = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("repository_description")));
         newRepoDescription.sendKeys("hola");
+        final WebElement createRepoButton;
+        createRepoButton = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"new_repository\"]/div[4]/button")));
+        createRepoButton.click();
     }
 }
